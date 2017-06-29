@@ -9,7 +9,7 @@ def index(request):
     latest_q_list = Question.objects.order_by('-q_date')[:5]
 
     context = {'latest_q_list': latest_q_list}
-    return render(request, 'poll/index.html', context)
+    return render(request, 'poll/hello.html', context)
 
 def detail(request, q_id):
     question = get_object_or_404(Question, pk=q_id)
